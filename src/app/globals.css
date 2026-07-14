@@ -1,15 +1,30 @@
 @import "tailwindcss";
+:root {
+  --background: #090909;
+  --foreground: #ffffff;
 
-body{
-    background:#000;
-    color:white;
-    font-family:Arial,Helvetica,sans-serif;
+  --gold: #d4af37;
+  --gold-light: #f0d67b;
+
+  --card: #111111;
+
+  --muted: #9b9b9b;
 }
 
-*{
-    box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
