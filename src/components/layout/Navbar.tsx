@@ -8,14 +8,17 @@ export default function Navbar() {
 
         <div className="hidden gap-8 md:flex">
           <a href="#">Home</a>
-          <a href="#">Barbers</a>
-          <a href="#">Queue</a>
-          <a href="#">Contact</a>
+          <a href="#barbers">Barbers</a>
+          <a href="#queue">Queue</a>
+          <a href="#contact">Contact</a>
+          <a href="#services">Services</a>
         </div>
-
-        <button className="rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-black transition hover:bg-yellow-300">
-          Reserve
-        </button>
+        <a
+          href="#barbers"
+          className="rounded-xl bg-yellow-400 px-5 py-3 font-semibold text-black transition hover:bg-yellow-300"
+      >
+        Reserve
+      </a>
       </div>
     </nav>
   );

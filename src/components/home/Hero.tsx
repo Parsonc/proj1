@@ -4,36 +4,75 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center justify-center px-6">
-      <div className="max-w-3xl text-center">
+    <section
+      className="relative flex min-h-screen items-center justify-center bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/hero.jpg')",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-6xl font-black leading-tight md:text-8xl"
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-black leading-tight text-white md:text-7xl"
         >
-          PREMIUM
+          DRE'S
           <br />
-          BARBERING
+          BARBERSHOP
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: .4 }}
-          className="mx-auto mt-8 max-w-xl text-lg text-zinc-400"
+          transition={{ delay: 0.3 }}
+          className="mx-auto mt-8 max-w-2xl text-lg text-zinc-300 md:text-xl"
         >
-          Join the live queue or reserve your spot with one of our
-          professional barbers.
+          Premium cuts, expert grooming and a live queue that lets you
+          reserve your spot before you arrive.
         </motion.p>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: .96 }}
-          className="mt-10 rounded-xl bg-yellow-400 px-8 py-4 text-lg font-bold text-black"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-10 flex flex-col justify-center gap-4 sm:flex-row"
         >
-          Reserve Your Spot
-        </motion.button>
+          <button className="rounded-xl bg-yellow-400 px-8 py-4 font-bold text-black transition hover:bg-yellow-300">
+            Reserve Now
+          </button>
+
+          <button className="rounded-xl border border-white px-8 py-4 font-bold text-white transition hover:bg-white hover:text-black">
+            View Queue
+          </button>
+        </motion.div>
+
+        {/* Stats */}
+        <div className="mt-20 grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+          <div>
+            <h3 className="text-3xl font-bold text-yellow-400">5000+</h3>
+            <p className="text-zinc-300">Haircuts</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold text-yellow-400">4.9★</h3>
+            <p className="text-zinc-300">Customer Rating</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold text-yellow-400">4</h3>
+            <p className="text-zinc-300">Professional Barbers</p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-bold text-yellow-400">15 min</h3>
+            <p className="text-zinc-300">Average Wait</p>
+          </div>
+        </div>
       </div>
     </section>
   );
